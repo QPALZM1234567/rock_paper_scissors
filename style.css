@@ -1,0 +1,9 @@
+.result, .btns{
+    display:flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btns button{
+    width: 100px;
+}
