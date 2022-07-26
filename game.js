@@ -9,6 +9,15 @@ function getComputerChoice() {
     }
 }
 
+function handleClick(e) {
+    alert(playRound(e.target.textContent, getComputerChoice()));
+}
+
+btns = document.querySelectorAll('button');
+btns.forEach(btn => {
+    btn.addEventListener('click', handleClick);
+})
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toUpperCase() === computerSelection.toUpperCase()) {
         return "It's a tie! Both players played " + playerSelection.toUpperCase(); 
@@ -41,6 +50,6 @@ function game() {
     }
 }
 
-game();
+
 
 
